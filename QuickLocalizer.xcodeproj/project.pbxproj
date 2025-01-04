@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		95B6916E2D29B95B0034C326 /* Todo Items.md in Resources */ = {isa = PBXBuildFile; fileRef = 95B6916D2D29B9510034C326 /* Todo Items.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		95B691512D29A29D0034C326 /* QuickLocalizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickLocalizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95B6916D2D29B9510034C326 /* Todo Items.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Todo Items.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -45,6 +50,7 @@
 		95B691482D29A29D0034C326 = {
 			isa = PBXGroup;
 			children = (
+				95B6916D2D29B9510034C326 /* Todo Items.md */,
 				95B691532D29A29D0034C326 /* QuickLocalizer */,
 				95B691522D29A29D0034C326 /* Products */,
 			);
@@ -124,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B6916E2D29B95B0034C326 /* Todo Items.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,6 +32,24 @@
           }
         }
       }
+    },
+    "Key: %@" : {
+
+    },
+    "Load Strings" : {
+
+    },
+    "No translation available" : {
+
+    },
+    "Quick Localizer" : {
+
+    },
+    "Select Localization" : {
+
+    },
+    "Show Translations" : {
+
     }
   },
   "version" : "1.0"

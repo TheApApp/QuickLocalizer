@@ -5,6 +5,7 @@
 //  Created by Michael Rowe1 on 1/4/25.
 //
 
+import AppKit
 import SwiftUI
 import Translation
 
@@ -41,6 +42,7 @@ struct ContentView: View {
     @State private var languageIndex = Int.max
     
     @State private var showingExporter = false
+    @State private var showingTranslation = false
     @State private var document = TranslationDocument(sourceLanguage: "en")
     
     var body: some View {
@@ -60,14 +62,25 @@ struct ContentView: View {
                 Group {
                     switch translationState {
                     case .waiting:
+                        HStack{
+                        Button("Load Strings") {
+                            importStrings()
+                        }
+                        
                         Button("Create Translation") {
                             createAllTranslations()
                         }
+                    }
                     case .creating:
                         ProgressView()
                     case .done:
-                        Button("Export") {
-                            showingExporter.toggle()
+                        HStack {
+                            Button("Show Translations") {
+                                showingTranslation.toggle()
+                            }
+                            Button("Export") {
+                                showingExporter.toggle()
+                            }
                         }
                     }
                 }
@@ -78,6 +91,16 @@ struct ContentView: View {
                 translationState = .waiting
             }
             .onChange(of: languages, updateLanguages)
+            .onChange(of: showingTranslation) { isOpen in
+                if isOpen {
+                    openLocalizationWindow()
+                    showingTranslation = false
+                }
+            }
+            .sheet(isPresented: $showingTranslation) {
+                EmptyView()
+                TranslationView(translationDocument: document, targetLocalization: languages)
+            }
             .fileExporter(isPresented: $showingExporter, document: document, contentType: .xcStrings, defaultFilename: "Localizable.strings", onCompletion: handleSaveResult)
         }
     }
@@ -89,6 +112,43 @@ struct ContentView: View {
         document.strings.removeAll()
         doNextTranslation()
     }
+    
+    func importStrings() {
+        let panel = NSOpenPanel()
+        panel.allowedContentTypes = [.xcStrings]
+        panel.allowsMultipleSelection = false
+        panel.canChooseDirectories = false
+
+        if panel.runModal() == .OK, let url = panel.url {
+            do {
+                let data = try Data(contentsOf: url)
+                let decodedDocument = try JSONDecoder().decode(TranslationDocument.self, from: data)
+                document = decodedDocument
+                input = decodedDocument.strings.keys.sorted().joined(separator: "\n")
+            } catch {
+                print("Failed to load document: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    private func openLocalizationWindow() {
+
+        let localizationView = TranslationView(
+                    translationDocument: document,
+                    targetLocalization: languages
+                )
+                
+                let hostingController = NSHostingController(rootView: localizationView)
+                let window = NSWindow(
+                    contentViewController: hostingController
+                )
+                window.title = "Localization Viewer"
+                window.setContentSize(NSSize(width: 600, height: 400))
+                window.makeKeyAndOrderFront(nil)
+                
+                // Ensure the window stays in scope
+                NSApplication.shared.activate(ignoringOtherApps: true)
+       }
     
     func translate(using session: TranslationSession) async {
         do {

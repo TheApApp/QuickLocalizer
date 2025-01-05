@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct QuickLocalizerApp: App {
     var body: some Scene {
-        WindowGroup {
+        WindowGroup("Quick Localizer") {
             ContentView()
         }
     }

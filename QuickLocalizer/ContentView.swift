@@ -91,8 +91,9 @@ struct ContentView: View {
                 translationState = .waiting
             }
             .onChange(of: languages, updateLanguages)
-            .onChange(of: showingTranslation) { isOpen in
-                if isOpen {
+            
+            .onChange(of: showingTranslation) {
+                if showingTranslation {
                     openLocalizationWindow()
                     showingTranslation = false
                 }

@@ -6,6 +6,7 @@
 //
 
 import AppKit
+import os
 import SwiftUI
 import Translation
 
@@ -14,7 +15,7 @@ struct ContentView: View {
         case waiting, creating, done
     }
     
-    @State private var input = "Hello, world!"
+    @State private var input = "1) You can import an existing Localization.xcstring\n2) Select the languages you'd like to translate\n3) Then export your translation back to your project."
     @State private var translationState = TranslationState.waiting
     
     @State private var configuration = TranslationSession.Configuration(
@@ -50,6 +51,8 @@ struct ContentView: View {
     @State private var showingExporter = false
     @State private var showingTranslation = false
     @State private var document = TranslationDocument(sourceLanguage: "en")
+    
+    let logger=Logger(subsystem: "com.theapapp.QuickLocalizer", category: "Errors")
     
     var body: some View {
         NavigationSplitView {
@@ -108,7 +111,7 @@ struct ContentView: View {
                 EmptyView()
                 TranslationView(translationDocument: document, targetLocalization: languages)
             }
-            .fileExporter(isPresented: $showingExporter, document: document, contentType: .xcStrings, defaultFilename: "Localizable.strings", onCompletion: handleSaveResult)
+            .fileExporter(isPresented: $showingExporter, document: document, contentType: .xcStrings, defaultFilename: "Localizable", onCompletion: handleSaveResult)
         }
     }
     
@@ -129,12 +132,11 @@ struct ContentView: View {
         if panel.runModal() == .OK, let url = panel.url {
             do {
                 let data = try Data(contentsOf: url)
-                print(String(data: data, encoding: .utf8)!)
                 let decodedDocument = try JSONDecoder().decode(TranslationDocument.self, from: data)
                 document = decodedDocument
                 input = decodedDocument.strings.keys.sorted().joined(separator: "\n")
             } catch {
-                print("Failed to load document: \(error.localizedDescription)")
+                logger.error("Failed to load document: \(error.localizedDescription)")
             }
         }
     }

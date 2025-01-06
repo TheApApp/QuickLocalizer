@@ -1,8 +1,353 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "1) You can import an existing Localization.xcstring" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar-AE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1) يمكنك استيراد Localization.xcstring موجود"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1) Sie können eine vorhandene Localization.xcstring importieren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1) Puede importar una cadena de localización.xc existente"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1) Vous pouvez importer une chaîne de localisation.xc existante"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1) आप मौजूदा Localization.xcstring आयात कर सकते हैं"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1) Anda dapat mengimpor Localization.xcstring yang sudah ada"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1) Puoi importare una localizzazione.xcstring esistente"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1）既存のLocalization.xcstringをインポートできます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1) 기존 Localization.xcstring을 가져올 수 있습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1) U kunt een bestaande Localization.xcstring importeren"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1) Możesz zaimportować istniejący Localization.xcstring"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1) Você pode importar um Localization.xcstring existente"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1) Вы можете импортировать существующую Localization.xcstring"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1) คุณสามารถนําเข้า Localization.xcstring ที่มีอยู่ได้"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1) Mevcut bir Localization.xcstring'i içe aktarabilirsiniz"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1) Ви можете імпортувати існуючу Localization.xcstring"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1) Bạn có thể nhập một Localization.xcstring hiện có"
+          }
+        },
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1）您可以导入现有的Localization.xcstring"
+          }
+        }
+      }
+    },
+    "2) Select the languages you'd like to translate" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar-AE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2) اختر اللغات التي ترغب في ترجمتها"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2) Wählen Sie die Sprachen aus, die Sie übersetzen möchten"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2) Seleccione los idiomas que le gustaría traducir"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2) Sélectionnez les langues que vous souhaitez traduire"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2) उन भाषाओं का चयन करें जिन्हें आप अनुवाद करना चाहते हैं"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2) Pilih bahasa yang ingin Anda terjemahkan"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2) Seleziona le lingue che desideri tradurre"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2）翻訳したい言語を選択してください"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2) 번역하고 싶은 언어를 선택하세요"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2) Selecteer de talen die u wilt vertalen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2) Wybierz języki, które chcesz przetłumaczyć"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2) Selecione os idiomas que você gostaria de traduzir"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2) Выберите языки, на которые вы хотите перевести"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2) เลือกภาษาที่คุณต้องการแปล"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2) Çevirmek istediğiniz dilleri seçin"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2) Виберіть мови, які ви хотіли б перекласти"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2) Chọn ngôn ngữ bạn muốn dịch"
+          }
+        },
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2）选择您想要翻译的语言"
+          }
+        }
+      }
+    },
+    "3) Then export your translation back to your project." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar-AE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3) ثم قم بتصدير ترجمتك مرة أخرى إلى مشروعك."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3) Exportieren Sie dann Ihre Übersetzung zurück in Ihr Projekt."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3) Luego exporta tu traducción de vuelta a tu proyecto."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3) Exportez ensuite votre traduction vers votre projet."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3) फिर अपने अनुवाद को अपनी परियोजना में वापस निर्यात करें।"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3) Kemudian ekspor terjemahan Anda kembali ke proyek Anda."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3) Quindi esporta la tua traduzione nel tuo progetto."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3）その後、翻訳をプロジェクトにエクスポートします。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3) 그런 다음 번역을 프로젝트로 다시 내보냅니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3) Exporteer vervolgens je vertaling terug naar je project."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3) Następnie wyeksportuj swoje tłumaczenie z powrotem do swojego projektu."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3) Em seguida, exporte sua tradução de volta para o seu projeto."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3) Затем экспортируйте перевод обратно в свой проект."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3) จากนั้นส่งออกคําแปลของคุณกลับไปที่โครงการของคุณ"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3) Ardından çevirinizi projenize geri aktarın."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3) Потім експортуйте свій переклад назад до свого проєкту."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3) Sau đó xuất bản dịch của bạn trở lại dự án của bạn."
+          }
+        },
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3）然后将您的翻译导出回您的项目。"
+          }
+        }
+      }
+    },
     "Create Translation" : {
       "localizations" : {
+        "ar-AE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إنشاء ترجمة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27,6 +372,12 @@
             "value" : "अनुवाद बनाएं"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buat Terjemahan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -39,10 +390,22 @@
             "value" : "翻訳を作成する"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "번역 만들기"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vertaling maken"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utwórz tłumaczenie"
           }
         },
         "pt" : {
@@ -51,10 +414,34 @@
             "value" : "Criar Tradução"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Создать перевод"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สร้างคําแปล"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çeviri Oluştur"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Створити переклад"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tạo bản dịch"
           }
         },
         "zh" : {
@@ -67,6 +454,12 @@
     },
     "Export" : {
       "localizations" : {
+        "ar-AE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تَصْدير"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -91,6 +484,12 @@
             "value" : "निर्यात"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ekspor"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -103,10 +502,22 @@
             "value" : "輸出"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "수출"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Exporteren"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eksport"
           }
         },
         "pt" : {
@@ -115,10 +526,34 @@
             "value" : "Exportação"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Экспорт"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ส่งสินค้าออก"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ihracat"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Експорт"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xuất khẩu"
           }
         },
         "zh" : {
@@ -131,6 +566,12 @@
     },
     "Key: %@" : {
       "localizations" : {
+        "ar-AE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المفتاح: %@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -155,6 +596,12 @@
             "value" : "कुंजी: %@"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kunci: %@"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -167,10 +614,22 @@
             "value" : "キー：%@"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "키: %@"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sleutel: %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klucz: %@"
           }
         },
         "pt" : {
@@ -179,10 +638,34 @@
             "value" : "Chave: %@"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ключ: %@"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คีย์: %@"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anahtar: %@"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ключ: %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khóa: %@"
           }
         },
         "zh" : {
@@ -195,6 +678,12 @@
     },
     "Load Strings" : {
       "localizations" : {
+        "ar-AE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحميل السلاسل"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -219,6 +708,12 @@
             "value" : "स्ट्रिंग्स लोड करें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memuat String"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -231,10 +726,22 @@
             "value" : "ロードストリング"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로드 스트링"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Strings laden"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Załaduj struny"
           }
         },
         "pt" : {
@@ -243,10 +750,34 @@
             "value" : "Cadeias de carregamento"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Загрузить Строки"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โหลดสตริง"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dizeleri Yükle"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Навантажувані Рядки"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tải chuỗi"
           }
         },
         "zh" : {
@@ -259,6 +790,12 @@
     },
     "Localization Results" : {
       "localizations" : {
+        "ar-AE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نتائج التوطين"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -283,6 +820,12 @@
             "value" : "स्थानीयकरण परिणाम"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hasil Pelokalan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -295,10 +838,22 @@
             "value" : "ローカリゼーションの結果"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현지화 결과"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lokalisatieresultaten"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wyniki Lokalizacji"
           }
         },
         "pt" : {
@@ -307,10 +862,34 @@
             "value" : "Resultados de Localização"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Результаты локализации"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ผลลัพธ์การแปล"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yerelleştirme Sonuçları"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Результати локалізації"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kết quả bản địa hóa"
           }
         },
         "zh" : {
@@ -323,6 +902,12 @@
     },
     "No translation available" : {
       "localizations" : {
+        "ar-AE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا توجد ترجمة متاحة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -347,6 +932,12 @@
             "value" : "कोई अनुवाद उपलब्ध नहीं है"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak ada terjemahan yang tersedia"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -359,10 +950,22 @@
             "value" : "利用可能な翻訳はありません"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사용 가능한 번역이 없습니다"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geen vertaling beschikbaar"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brak dostępnego tłumaczenia"
           }
         },
         "pt" : {
@@ -371,10 +974,34 @@
             "value" : "Nenhuma tradução disponível"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перевод недоступен"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่มีการแปล"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çeviri mevcut değil"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Немає доступного перекладу"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không có bản dịch nào có sẵn"
           }
         },
         "zh" : {
@@ -387,6 +1014,12 @@
     },
     "Quick Localizer" : {
       "localizations" : {
+        "ar-AE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المترجم السريع"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -411,6 +1044,12 @@
             "value" : "त्वरित लोकलाइज़र"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lokalisasi Cepat"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -423,10 +1062,22 @@
             "value" : "クイックローカライザー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "퀵 로컬라이저"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Snelle lokalizer"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Szybki lokalizator"
           }
         },
         "pt" : {
@@ -435,10 +1086,34 @@
             "value" : "Localizador Rápido"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Быстрый Локализатор"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวระบุตําแหน่งด่วน"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hızlı Yerelleştirici"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Швидкий Локалізатор"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trình định vị nhanh"
           }
         },
         "zh" : {
@@ -451,6 +1126,12 @@
     },
     "Select Localization" : {
       "localizations" : {
+        "ar-AE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حدد التعريب"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -475,6 +1156,12 @@
             "value" : "स्थानीयकरण चुनें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pilih Lokalisasi"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -487,10 +1174,22 @@
             "value" : "ローカリゼーションを選択"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현지화 선택"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Selecteer Lokalisatie"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wybierz lokalizację"
           }
         },
         "pt" : {
@@ -499,10 +1198,34 @@
             "value" : "Selecione Localização"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите локализацию"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลือกการแปล"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yerelleştirmeyi Seç"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Виберіть Локалізацію"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chọn bản địa hóa"
           }
         },
         "zh" : {
@@ -515,6 +1238,12 @@
     },
     "Show Translations" : {
       "localizations" : {
+        "ar-AE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إظهار الترجمات"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -539,6 +1268,12 @@
             "value" : "अनुवाद दिखाएँ"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tampilkan Terjemahan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -551,10 +1286,22 @@
             "value" : "翻訳を表示する"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "번역 표시"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vertalingen tonen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokaż tłumaczenia"
           }
         },
         "pt" : {
@@ -563,10 +1310,34 @@
             "value" : "Mostrar traduções"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать переводы"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แสดงคําแปล"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çevirileri Göster"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Показати переклади"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hiển thị bản dịch"
           }
         },
         "zh" : {

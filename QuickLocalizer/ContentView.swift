@@ -24,18 +24,24 @@ struct ContentView: View {
     
     @State private var languages = [
         Language(id: "ar", name: "Arabic", isSelected: false),
-        Language(id: "fr", name: "French", isSelected: false),
-        Language(id: "de", name: "German", isSelected: true),
-        Language(id: "zh", name: "Chinses", isSelected: false),
+        Language(id: "zh", name: "Chinese", isSelected: false),
         Language(id: "nl", name: "Dutch", isSelected: false),
-        Language(id: "it", name: "Italian", isSelected: false),
+        Language(id: "en", name: "English", isSelected: false),
+        Language(id: "fr", name: "French", isSelected: false),
+        Language(id: "de", name: "German", isSelected: false),
         Language(id: "hi", name: "Hindi", isSelected: false),
-        Language(id: "es", name: "Spanish", isSelected: false),
+        Language(id: "id", name: "Indonesian", isSelected: false),
+        Language(id: "it", name: "Italian", isSelected: false),
         Language(id: "ja", name: "Japanese", isSelected: false),
         Language(id: "ko", name: "Korean", isSelected: false),
-        Language(id: "ru", name: "Russian", isSelected: false),
+        Language(id: "pl", name: "Polish", isSelected: false),
         Language(id: "pt", name: "Portuguese", isSelected: false),
-        Language(id: "uk", name: "Ukrainian", isSelected: false)
+        Language(id: "ru", name: "Russian", isSelected: false),
+        Language(id: "es", name: "Spanish", isSelected: false),
+        Language(id: "th", name: "Thai", isSelected: false),
+        Language(id: "tr", name: "Turkish", isSelected: false),
+        Language(id: "uk", name: "Ukrainian", isSelected: false),
+        Language(id: "vi", name: "Vietnamese", isSelected: false),
     ]
     
     @State private var translatingLanguages = [Language]()
@@ -123,6 +129,7 @@ struct ContentView: View {
         if panel.runModal() == .OK, let url = panel.url {
             do {
                 let data = try Data(contentsOf: url)
+                print(String(data: data, encoding: .utf8)!)
                 let decodedDocument = try JSONDecoder().decode(TranslationDocument.self, from: data)
                 document = decodedDocument
                 input = decodedDocument.strings.keys.sorted().joined(separator: "\n")
@@ -165,7 +172,7 @@ struct ContentView: View {
                     
                     var currentTranslationString = document.strings[response.sourceText] ?? TranslationString()
                     
-                    currentTranslationString.localizations[response.targetLanguage.minimalIdentifier] = TranslationLanguage(stringUnit: translationUnit)
+                    currentTranslationString.localizations![response.targetLanguage.minimalIdentifier] = TranslationLanguage(stringUnit: translationUnit)
                     
                     document.strings[response.sourceText] = currentTranslationString
                     

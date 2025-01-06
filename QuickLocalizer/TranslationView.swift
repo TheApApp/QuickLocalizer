@@ -28,7 +28,7 @@ struct TranslationView: View {
                 
                 List {
                     ForEach(sortedKeys(), id: \.self) { key in
-                        if let localizedString = translationDocument.strings[key]?.localizations[selectedLocalization]?.stringUnit.value {
+                        if let localizedString = translationDocument.strings[key]?.localizations![selectedLocalization]?.stringUnit?.value {
                             VStack(alignment: .leading) {
                                 Text("Key: \(key)")
                                     .font(.headline)
@@ -50,7 +50,7 @@ struct TranslationView: View {
                 }
             }
         }
-        .navigationTitle("Localization: \(targetLocalization)")
+        .navigationTitle("Localization Results")
     }
     
     private func sortedKeys() -> [String] {

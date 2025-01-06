@@ -13,16 +13,16 @@ extension UTType {
     static var xcStrings = UTType("com.apple.xcode.xcstrings")!
 }
 struct TranslationUnit: Codable {
-    var state = "translated"
-    var value: String
+    var state: String? = "translated"
+    var value: String?
 }
 
 struct TranslationLanguage: Codable {
-    var stringUnit: TranslationUnit
+    var stringUnit: TranslationUnit?
 }
 
 struct TranslationString: Codable {
-    var localizations = [String: TranslationLanguage]()
+    var localizations: [String: TranslationLanguage]? = [String: TranslationLanguage]()
 }
 
 struct TranslationDocument: Codable, FileDocument {

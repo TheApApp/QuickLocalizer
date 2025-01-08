@@ -15,6 +15,10 @@ struct ContentView: View {
         case waiting, creating, done
     }
     
+    /// Adding a WalkThru launch screen  Will alllow for a reset to do the walkthu again
+    @AppStorage("walkthrough") var walkthrough = 1
+    @AppStorage("totalViews") var totalViews = 1
+    
     @State private var input = "1) You can import an existing Localization.xcstring\n2) Select the languages you'd like to translate\n3) Then export your translation back to your project."
     @State private var translationState = TranslationState.waiting
     
@@ -55,63 +59,77 @@ struct ContentView: View {
     let logger=Logger(subsystem: "com.theapapp.QuickLocalizer", category: "Errors")
     
     var body: some View {
-        NavigationSplitView {
-            ScrollView {
-                Form {
-                    ForEach($languages) { $language in
-                        Toggle(language.name, isOn: $language.isSelected)
-                    }
-                }
-            }
-        } detail: {
-            VStack(spacing: 0) {
-                TextEditor(text: $input)
-                    .font(.largeTitle)
-                    .translationTask(configuration, action: translate)
-                Group {
-                    switch translationState {
-                    case .waiting:
-                        HStack{
-                        Button("Load Strings") {
-                            importStrings()
-                        }
-                        
-                        Button("Create Translation") {
-                            createAllTranslations()
-                        }
-                    }
-                    case .creating:
-                        ProgressView()
-                    case .done:
-                        HStack {
-                            Button("Show Translations") {
-                                showingTranslation.toggle()
-                            }
-                            Button("Export") {
-                                showingExporter.toggle()
-                            }
-                        }
-                    }
-                }
-                .frame(height: 60)
-            }
-
-            .onChange(of: input) {
-                translationState = .waiting
-            }
-            .onChange(of: languages, updateLanguages)
+        if walkthrough == 1 {
+            WalkThroughtView(title: "Easily translate your strings", description: """
+            Quick Localizer utilize's Apple's own lanugage translations dictionaries to quickly, and easily, 
+            translate your Xcode's projects strings to any supported language.
             
-            .onChange(of: showingTranslation) {
-                if showingTranslation {
-                    openLocalizationWindow()
-                    showingTranslation = false
+            The dictionaries can be downlaoded via:
+            System Settings...Languages and Regions...Translation Languages
+            
+            Or if you pick a language not already installed, it will utilize
+            download them on demand.
+            """
+, bgColor: "AccentColor", img: "Welcome_one")
+        } else {
+            NavigationSplitView {
+                ScrollView {
+                    Form {
+                        ForEach($languages) { $language in
+                            Toggle(language.name, isOn: $language.isSelected)
+                        }
+                    }
                 }
+            } detail: {
+                VStack(spacing: 0) {
+                    TextEditor(text: $input)
+                        .font(.largeTitle)
+                        .translationTask(configuration, action: translate)
+                    Group {
+                        switch translationState {
+                        case .waiting:
+                            HStack{
+                                Button("Load Strings") {
+                                    importStrings()
+                                }
+                                
+                                Button("Create Translation") {
+                                    createAllTranslations()
+                                }
+                            }
+                        case .creating:
+                            ProgressView()
+                        case .done:
+                            HStack {
+                                Button("Show Translations") {
+                                    showingTranslation.toggle()
+                                }
+                                Button("Export") {
+                                    showingExporter.toggle()
+                                }
+                            }
+                        }
+                    }
+                    .frame(height: 60)
+                }
+                
+                .onChange(of: input) {
+                    translationState = .waiting
+                }
+                .onChange(of: languages, updateLanguages)
+                
+                .onChange(of: showingTranslation) {
+                    if showingTranslation {
+                        openLocalizationWindow()
+                        showingTranslation = false
+                    }
+                }
+                .sheet(isPresented: $showingTranslation) {
+                    EmptyView()
+                    TranslationView(translationDocument: document, targetLocalization: languages)
+                }
+                .fileExporter(isPresented: $showingExporter, document: document, contentType: .xcStrings, defaultFilename: "Localizable", onCompletion: handleSaveResult)
             }
-            .sheet(isPresented: $showingTranslation) {
-                EmptyView()
-                TranslationView(translationDocument: document, targetLocalization: languages)
-            }
-            .fileExporter(isPresented: $showingExporter, document: document, contentType: .xcStrings, defaultFilename: "Localizable", onCompletion: handleSaveResult)
         }
     }
     

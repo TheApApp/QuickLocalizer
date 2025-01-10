@@ -19,19 +19,19 @@ struct ContentView: View {
     @AppStorage("walkthrough") var walkthrough = 1
     @AppStorage("totalViews") var totalViews = 1
     
-    @State private var input = "1) You can import an existing Localization.xcstring\n2) Select the languages you'd like to translate\n3) Then export your translation back to your project."
+    @State private var input = "Note the input language must be English(US)\n1) You can import an existing Localization.xcstring\n2) Select the languages you'd like to translate\n3) Then export your translation back to your project."
     @State private var translationState = TranslationState.waiting
     
     @State private var configuration = TranslationSession.Configuration(
         source: Locale.Language(identifier: "en"),
-        target: Locale.Language(identifier: "de")
+        target: Locale.Language(identifier: "en")
     )
     
     @State private var languages = [
         Language(id: "ar", name: "Arabic", isSelected: false),
         Language(id: "zh", name: "Chinese", isSelected: false),
         Language(id: "nl", name: "Dutch", isSelected: false),
-        Language(id: "en", name: "English", isSelected: false),
+//        Language(id: "en", name: "English", isSelected: false),
         Language(id: "fr", name: "French", isSelected: false),
         Language(id: "de", name: "German", isSelected: false),
         Language(id: "hi", name: "Hindi", isSelected: false),

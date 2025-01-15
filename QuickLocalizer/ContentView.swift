@@ -67,7 +67,7 @@ struct ContentView: View {
             The dictionaries can be downlaoded via:
             System Settings...Languages and Regions...Translation Languages
             
-            Or if you pick a language not already installed, it will utilize
+            Or if you pick a language not already installed, it will 
             download them on demand.
             """
 , bgColor: "AccentColor", img: "Welcome_one")

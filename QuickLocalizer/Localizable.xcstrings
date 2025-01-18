@@ -2,6 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     "1) You can import an existing Localization.xcstring" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar-AE" : {
           "stringUnit" : {
@@ -114,6 +115,7 @@
       }
     },
     "2) Select the languages you'd like to translate" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar-AE" : {
           "stringUnit" : {
@@ -226,6 +228,7 @@
       }
     },
     "3) Then export your translation back to your project." : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar-AE" : {
           "stringUnit" : {

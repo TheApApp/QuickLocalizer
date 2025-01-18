@@ -129,6 +129,16 @@ struct ContentView: View {
                     TranslationView(translationDocument: document, targetLocalization: languages)
                 }
                 .fileExporter(isPresented: $showingExporter, document: document, contentType: .xcStrings, defaultFilename: "Localizable", onCompletion: handleSaveResult)
+                .toolbar {
+                    ToolbarItem(placement: .automatic) {
+                        Button(action: {
+                            walkthrough = 1
+                        }, label: {
+                            Image(systemName: "questionmark.circle")
+                                .font(.title2)
+                        })
+                    }
+                }
             }
         }
     }

@@ -2,7 +2,6 @@
   "sourceLanguage" : "en",
   "strings" : {
     "1) You can import an existing Localization.xcstring" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar-AE" : {
           "stringUnit" : {
@@ -115,7 +114,6 @@
       }
     },
     "2) Select the languages you'd like to translate" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar-AE" : {
           "stringUnit" : {
@@ -228,7 +226,6 @@
       }
     },
     "3) Then export your translation back to your project." : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar-AE" : {
           "stringUnit" : {
@@ -1456,6 +1453,118 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "蹦蹦跳跳"
+          }
+        }
+      }
+    },
+    "Translation" : {
+      "localizations" : {
+        "ar-AE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تَرْجَمة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Übersetzung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Traducción"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Traduction"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अनुवाद"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terjemahan"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Traduzione"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "翻訳"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "에서 으로의 번역한 책from into"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vertaling"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tłumaczenie"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tradução"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перевод"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การแปล"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çeviri"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Переклад"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bản dịch"
+          }
+        },
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "翻译"
           }
         }
       }

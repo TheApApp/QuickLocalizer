@@ -31,7 +31,6 @@ struct ContentView: View {
         Language(id: "ar", name: "Arabic", isSelected: false),
         Language(id: "zh", name: "Chinese", isSelected: false),
         Language(id: "nl", name: "Dutch", isSelected: false),
-//        Language(id: "en", name: "English", isSelected: false),
         Language(id: "fr", name: "French", isSelected: false),
         Language(id: "de", name: "German", isSelected: false),
         Language(id: "hi", name: "Hindi", isSelected: false),
@@ -50,6 +49,7 @@ struct ContentView: View {
     ]
     
     @State private var translatingLanguages = [Language]()
+    @State private var translatedLanguages = [Language]()
     @State private var languageIndex = Int.max
     
     @State private var showingExporter = false
@@ -61,16 +61,14 @@ struct ContentView: View {
     var body: some View {
         if walkthrough == 1 {
             WalkThroughtView(title: "Easily translate your strings", description: """
-            Quick Localizer utilize's Apple's own lanugage translations dictionaries to quickly, and easily, 
-            translate your Xcode's projects strings to any supported language.
+            Quick Localizer utilize's Apple's own lanugage translations dictionaries to quickly, and easily, translate your Xcode's projects strings to any supported language.
             
-            The dictionaries can be downlaoded via:
+            The dictionaries can be downloaded via:
             System Settings...Languages and Regions...Translation Languages
             
-            Or if you pick a language not already installed, it will 
-            download them on demand.
+            Or if you pick a language not already installed, it will download them on demand.
             """
-, bgColor: "AccentColor", img: "Welcome_one")
+           , bgColor: "AccentColor", img: "Welcome_one")
         } else {
             NavigationSplitView {
                 ScrollView {
@@ -92,10 +90,12 @@ struct ContentView: View {
                                 Button("Load Strings") {
                                     importStrings()
                                 }
+                                .keyboardShortcut("l")
                                 
                                 Button("Create Translation") {
                                     createAllTranslations()
                                 }
+                                .keyboardShortcut("t")
                             }
                         case .creating:
                             ProgressView()
@@ -104,9 +104,11 @@ struct ContentView: View {
                                 Button("Show Translations") {
                                     showingTranslation.toggle()
                                 }
+                                .keyboardShortcut("s")
                                 Button("Export") {
                                     showingExporter.toggle()
                                 }
+                                .keyboardShortcut("e")
                             }
                         }
                     }
@@ -126,7 +128,7 @@ struct ContentView: View {
                 }
                 .sheet(isPresented: $showingTranslation) {
                     EmptyView()
-                    TranslationView(translationDocument: document, targetLocalization: languages)
+                    TranslationView(translationDocument: $document, targetLocalization: languages)
                 }
                 .fileExporter(isPresented: $showingExporter, document: document, contentType: .xcStrings, defaultFilename: "Localizable", onCompletion: handleSaveResult)
                 .toolbar {
@@ -137,6 +139,7 @@ struct ContentView: View {
                             Image(systemName: "questionmark.circle")
                                 .font(.title2)
                         })
+                        .keyboardShortcut("h")
                     }
                 }
             }
@@ -156,13 +159,19 @@ struct ContentView: View {
         panel.allowedContentTypes = [.xcStrings]
         panel.allowsMultipleSelection = false
         panel.canChooseDirectories = false
-
+        
         if panel.runModal() == .OK, let url = panel.url {
             do {
                 let data = try Data(contentsOf: url)
                 let decodedDocument = try JSONDecoder().decode(TranslationDocument.self, from: data)
                 document = decodedDocument
                 input = decodedDocument.strings.keys.sorted().joined(separator: "\n")
+                
+                // Preselect languages based on the content of the imported file
+                let availableLanguages = Set(decodedDocument.strings.values.compactMap { $0.localizations?.keys }.flatMap { $0 })
+                for index in languages.indices {
+                    languages[index].isSelected = availableLanguages.contains(languages[index].id)
+                }
             } catch {
                 logger.error("Failed to load document: \(error.localizedDescription)")
             }
@@ -170,23 +179,23 @@ struct ContentView: View {
     }
     
     private func openLocalizationWindow() {
-
+        
         let localizationView = TranslationView(
-                    translationDocument: document,
-                    targetLocalization: languages
-                )
-                
-                let hostingController = NSHostingController(rootView: localizationView)
-                let window = NSWindow(
-                    contentViewController: hostingController
-                )
-                window.title = "Localization Viewer"
-                window.setContentSize(NSSize(width: 600, height: 400))
-                window.makeKeyAndOrderFront(nil)
-                
-                // Ensure the window stays in scope
-                NSApplication.shared.activate(ignoringOtherApps: true)
-       }
+            translationDocument: $document,
+            targetLocalization: languages
+        )
+        
+        let hostingController = NSHostingController(rootView: localizationView)
+        let window = NSWindow(
+            contentViewController: hostingController
+        )
+        window.title = "Localization Viewer"
+        window.setContentSize(NSSize(width: 600, height: 400))
+        window.makeKeyAndOrderFront(nil)
+        
+        // Ensure the window stays in scope
+        NSApplication.shared.activate(ignoringOtherApps: true)
+    }
     
     func translate(using session: TranslationSession) async {
         do {

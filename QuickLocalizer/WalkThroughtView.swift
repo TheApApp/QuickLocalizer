@@ -5,15 +5,6 @@
 //  Created by Michael Rowe1 on 1/8/25.
 //
 
-
-//
-//  WalkThroughtView.swift
-//  Greet Keeper
-//
-//  Created by Michael Rowe1 on 12/29/24.
-//
-
-import SwiftData
 import SwiftUI
 
 struct WalkThroughtView: View {
@@ -31,33 +22,35 @@ struct WalkThroughtView: View {
                 HStack {
                     Text("Welcome!")
                         .accessibilityLabel("Welcome!")
+                        .foregroundColor(.primary)
                         .fontWeight(.bold)
                     Spacer()
-                    Button(
-                        action:{
-                            walkthrough = (totalViews + 1)
-                        },
-                        label: {
-                            Text("Skip")
+                }
+
+                HStack(){
+                    VStack {
+                        Image(img)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .cornerRadius(30)
+                            .frame(width: 150, height: 150)
+                            .padding()
+                        Spacer()
+                    }
+                    VStack {
+                        HStack {
+                            Text(title)
+                                .fontWeight(.semibold)
+                                .font(.title)
+                            Spacer()
                         }
-                    )
-                }.padding()
-                Spacer()
-                VStack(alignment: .leading){
-                    Image(img)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .cornerRadius(30)
-                        .padding()
-                    
-                    Text(title)
-                        .fontWeight(.semibold)
-                        .font(.title)
-                        .padding(.top)
-                    
-                    Text(description)
-                        .padding(.top, 5.0)
-                    
+                        
+                        Text(description)
+                            .padding(.top, 5.0)
+                            .padding(.bottom, 10.0)
+                        
+                        Spacer()
+                    }
                 }
                 
                 Spacer(minLength: 0)
@@ -66,15 +59,6 @@ struct WalkThroughtView: View {
             .padding()
             .overlay(
                 HStack{
-                    
-                    if walkthrough == 1 {
-                        ContainerRelativeShape()
-                            .frame(width: 25, height: 5)
-                    } else {
-                        ContainerRelativeShape()
-                            .foregroundColor(.accentColor.opacity(0.5))
-                            .frame(width: 25, height: 5)
-                    }
                     Spacer()
                     Button(
                         action:{
@@ -88,19 +72,11 @@ struct WalkThroughtView: View {
                         },
                         label: {
                             Image(systemName: "chevron.right")
-//                                .foregroundColor(Color.white)
-                                .font(.system(size: 35.0, weight: .semibold))
-                                .frame(width: 55, height: 55)
-                                .background(Color("BgNextBtn"))
+                                .font(.system(size: 20.0, weight: .semibold))
+                                .frame(width: 30, height: 30)
+                                .background(.secondary)
                                 .clipShape(Circle())
-                                .padding(17)
-                                .overlay(
-                                    ZStack{
-                                        Circle()
-                                            .stroke(Color.accentColor.opacity(0.4), lineWidth: 2)
-                                            .padding()
-                                    }
-                                )
+                                .padding(5)
                         }
                     )
                 }
@@ -118,5 +94,13 @@ struct WalkThroughtView: View {
 }
 
 #Preview {
-    WalkThroughtView(title: "WalkThrough", description: "This will show a lot of information", bgColor: "AccentColor", img:"Welcome_todo")
+    WalkThroughtView(title: "Easily translate your strings", description: """
+    Quick Localizer utilize's Apple's own lanugage translations dictionaries to quickly, and easily, translate your Xcode's projects strings to any supported language.
+    
+    The dictionaries can be downloaded via:
+    System Settings...Languages and Regions...Translation Languages
+    
+    Or if you pick a language not already installed, it will download them on demand.
+    """
+                     , bgColor: "AccentColor", img: "Welcome_one")
 }

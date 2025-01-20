@@ -68,7 +68,7 @@ struct ContentView: View {
             
             Or if you pick a language not already installed, it will download them on demand.
             """
-           , bgColor: "AccentColor", img: "Welcome_one")
+                             , bgColor: "AccentColor", img: "Welcome_one")
         } else {
             NavigationSplitView {
                 ScrollView {
@@ -169,14 +169,21 @@ struct ContentView: View {
                 
                 // Preselect languages based on the content of the imported file
                 let availableLanguages = Set(decodedDocument.strings.values.compactMap { $0.localizations?.keys }.flatMap { $0 })
+                
                 for index in languages.indices {
-                    languages[index].isSelected = availableLanguages.contains(languages[index].id)
-                }
+                    let languageID = languages[index].id
+                    // Fix for regional language of Arabic
+                    if languageID == "ar" && availableLanguages.contains("ar-AE") {
+                        languages[index].isSelected = true
+                    } else {
+                        languages[index].isSelected = availableLanguages.contains(languageID)
+                    }                }
             } catch {
                 logger.error("Failed to load document: \(error.localizedDescription)")
             }
         }
     }
+    
     
     private func openLocalizationWindow() {
         

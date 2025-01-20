@@ -96,19 +96,19 @@ struct TranslationView: View {
                 "en": TranslationLanguage(stringUnit: TranslationUnit(value: "Hello")),
                 "fr": TranslationLanguage(stringUnit: TranslationUnit(value: "Bonjour")),
                 "es": TranslationLanguage(stringUnit: TranslationUnit(value: "Hola")),
-                "ar": TranslationLanguage(stringUnit: TranslationUnit(value: "مرحبا"))
+                "ar-AE": TranslationLanguage(stringUnit: TranslationUnit(value: "مرحبا"))
             ]),
             "farewell": TranslationString(localizations: [
                 "en": TranslationLanguage(stringUnit: TranslationUnit(value: "Goodbye")),
                 "fr": TranslationLanguage(stringUnit: TranslationUnit(value: "Au revoir")),
                 "es": TranslationLanguage(stringUnit: TranslationUnit(value: "Adiós")),
-                "ar": TranslationLanguage(stringUnit: TranslationUnit(value: "مع السلامة"))
+                "ar-AE": TranslationLanguage(stringUnit: TranslationUnit(value: "مع السلامة"))
             ])
         ]
     )
     
     let languages = [
-        Language(id: "ar", name: "Arabic", isSelected: true), // Ensure Arabic is selected
+        Language(id: "ar", name: "Arabic", isSelected: true), 
         Language(id: "fr", name: "French", isSelected: true),
         Language(id: "de", name: "German", isSelected: false),
         Language(id: "zh", name: "Chinese", isSelected: false),

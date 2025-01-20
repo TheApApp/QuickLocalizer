@@ -172,12 +172,14 @@ struct ContentView: View {
                 
                 for index in languages.indices {
                     let languageID = languages[index].id
-                    // Fix for regional language of Arabic
-                    if languageID == "ar" && availableLanguages.contains("ar-AE") {
+                    
+                    // Match base language ID with any regional extensions (e.g., "ar" with "ar-AE")
+                    if availableLanguages.contains(where: { $0.hasPrefix("\(languageID)-") || $0 == languageID }) {
                         languages[index].isSelected = true
                     } else {
-                        languages[index].isSelected = availableLanguages.contains(languageID)
-                    }                }
+                        languages[index].isSelected = false
+                    }
+                }
             } catch {
                 logger.error("Failed to load document: \(error.localizedDescription)")
             }
